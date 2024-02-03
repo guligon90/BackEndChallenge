@@ -6,6 +6,7 @@ Nesse desafio iremos desenvolver um servidor express, com algumas rotas que deve
 Você deverá fazer um fork desse projeto, e ao final, enviar um PR para este repositório.
 
 ## 1ª Quest - *Ping-pong*
+
 Para começarmos, primeiro temos que preparar nosso servidor. Inicialize um projeto contendo a biblioteca express que responda à seguinte requisição:
 
 **GET** */v1/ping*
@@ -15,12 +16,13 @@ Para começarmos, primeiro temos que preparar nosso servidor. Inicialize um proj
   }`
   
 ## 2ª Quest - *Número narcisista*
-Agora que já temos o servidor configurado e funcionando, vamos para o primeiro desafio de fato: 
+
+Agora que já temos o servidor configurado e funcionando, vamos para o primeiro desafio de fato:
 Um número narcisista é aquele que a soma dos seus dígitos elevada a quantidade de dígitos é igual ao número inicial.
 Exemplo:
 
 **153:**
-` 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153`
+`1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153`
 
 **1634:**
 `1^4 + 6^4 + 3^4 + 4^4 = 1 + 1296 + 81 + 256 = 1634`
@@ -34,6 +36,7 @@ Para resolvermos esse problema, será criada uma rota que recebe o número e ret
   }`
 
 ## 3ª Quest - *Qual é a música?*
+
 Aqui na Proft nós estamos constantemente lidando com integrações, contendo diversos tipos de respostas e estruturas de dados. Nessa quest iremos testar sua habilidade no consumo de API's, em que uma delas será a do Spotify.
 O desafio consiste em receber uma coordenada específica, e baseada na temperatura do local naquele momento, retornar qual é a melhor e mais popular música para se tocar.
 
@@ -51,18 +54,20 @@ Exemplo:
   }`
 
 ## 4ª Quest - *Reestruturando dados*
+
 Esse será o último desafio, e se trata de um dos casos que lidamos no dia-a-dia aqui na proft, pois nem sempre o retorno das informações dos nossos integradores estão no formato ideal. Este repositório contém um arquivo chamado **aux/dados.json**, na qual consiste em um array de vendas de vendedores.
 Para resolver essa quest, você deverá reorganizar esses dados na seguinte estrutura:
-* Data  (ISO 8601) (String)
-* Vendedores (Array de objetos)
-  * CPF do Vendedor (String)
-  * Quantidade de vendas do vendedor (Inteiro)
-  * Quantidade de peças vendidas pelo vendedor (Inteiro)
-  * Total vendido (Float)
-* Outras vendas (Vendas sem CPF) (Objeto)
-  * Quantidade de outras vendas (Inteiro)
-  * Quantidade de peças (Inteiro)
-  * Total vendido (Float)
+
+- Data  (ISO 8601) (String)
+- Vendedores (Array de objetos)
+  - CPF do Vendedor (String)
+  - Quantidade de vendas do vendedor (Inteiro)
+  - Quantidade de peças vendidas pelo vendedor (Inteiro)
+  - Total vendido (Float)
+- Outras vendas (Vendas sem CPF) (Objeto)
+  - Quantidade de outras vendas (Inteiro)
+  - Quantidade de peças (Inteiro)
+  - Total vendido (Float)
 
 - As vendas que não contém CPF deverão ser contabilizadas dentro de outras vendas.
 - O retorno será uma lista de objetos que corresponderá aos dias de vendas dentro do intervalo requerido.
@@ -76,6 +81,7 @@ Retorno:
 ![Exemplo](/aux/exemplo.png)
 
 ### Boas práticas desejáveis
+
 - Quebrar suas soluções em commits, conforme for avançando na resolução dos desafios. Para podermos acompanhar como seu desenvolvimento evolui.
 - Centralizar informações sensíveis em um arquivo .env;
 - Ter em mente a escalabilidade do código, e como ele vai se comportar em um ambiente de alta demanda de requisições;
